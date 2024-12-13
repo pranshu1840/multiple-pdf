@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #4caf50, #2196f3);
+            color: #343a40;
+        }
+        .container {
+            max-width: 500px;
+            margin-top: 100px;
+        }
+        .form-control, .btn {
+            border-radius: 25px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 30px;
+        }
+        .btn {
+            background: linear-gradient(120deg, #4caf50, #2196f3);
+            color: white;
+            border: none;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: linear-gradient(120deg, #2196f3, #4caf50);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .alert {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading">Login to PDF Chatbot</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+            </div>
+            {% if error %}
+                <div class="alert alert-danger">{{ error }}</div>
+            {% endif %}
+            <button type="submit" class="btn btn-block">Login</button>
+        </form>
+        <p class="text-center mt-4">Don't have an account? <a href="{{ url_for('register') }}" class="text-primary">Register here</a></p>
+    </div>
+</body>
+</html>
