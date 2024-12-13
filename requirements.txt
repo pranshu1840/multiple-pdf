@@ -5,5 +5,4 @@ langchain_community
 pinecone
 pinecone-client
 supabase
-sentence-transformers
 pypdf
