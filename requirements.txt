@@ -5,4 +5,3 @@ langchain_community
 pinecone
 pinecone-client
 supabase
-dotenv
