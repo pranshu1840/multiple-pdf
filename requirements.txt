@@ -1,5 +1,4 @@
 langchain
-faiss-cpu
 flask
 huggingface-hub
 langchain_community
