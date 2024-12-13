@@ -5,3 +5,5 @@ huggingface-hub
 langchain_community
 pinecone
 pinecone-client
+supabase
+dotenv
