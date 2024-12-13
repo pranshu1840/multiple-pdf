@@ -6,3 +6,4 @@ pinecone
 pinecone-client
 supabase
 pypdf
+sentence-transformers
